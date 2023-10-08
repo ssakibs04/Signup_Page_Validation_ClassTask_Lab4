@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_outerLayout.cshtml";
+}
+
+<h2>SignUp</h2>
+
+<form action="" method="post" class="container">
+    Name: <input type="text" class="form-control" name="Name" placeholder="Name" />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+
+
+    UserID <input type="text" class="form-control" name="UserID" placeholder="UserID" />
+    <span class="text-danger">@Html.ValidationMessage("UserID")</span><br />
+
+
+
+    Password:<input type="password" class="form-control" name="Password" placeholder="Password" />
+    <span class="text-danger">@Html.ValidationMessage("Password")</span><br />
+
+    ID: <input type="text" class="form-control" name="Id" placeholder="ID" />
+
+    <span class="text-danger">@Html.ValidationMessage("ID")</span><br />
+
+    Email: <input type="email" class="form-control" name="Email" placeholder="Email" />
+    <span class="text-danger">@Html.ValidationMessage("Email")</span><br />
+
+
+    DOB: <input type="date" class="form-control" name="DOB" />
+    <span class="text-danger">@Html.ValidationMessage("DOB")</span><br />
+
+    <br />
+    <input type="submit" value="Submit" class="btn btn-success" />
+
+</form>

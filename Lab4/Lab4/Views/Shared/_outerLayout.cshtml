@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "_outerLayout";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        <a class="btn btn-primary" href="/">Home</a>
+
+        <a class="btn btn-danger" href="/home/signup">Sign Up</a>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <div class="container">
+        Copyright .Net[B]
+    </div>
+</body>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</html>
+
